@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+	<meta name="author" content="ISHII 2bit &amp; ASAI Yuta">
+	<meta name="keywords" content="ISHII 2bit,ASAI Yuta,歯茎を噛むと林檎から血が出る">
+	<meta name="description" content="歯茎を噛むと林檎から血が出る 公式ウェブサイト">
+	<!-- begin og -->
+		<meta property="og:title" content="歯茎を噛むと林檎から血が出る">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://歯茎を噛むと林檎から血が出る.jp/">
+		<meta property="og:description" content="歯茎を噛むと林檎から血が出る 公式ウェブサイト">
+		<meta property="og:image" content="http://歯茎を噛むと林檎から血が出る.jp/og.png">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+	<!-- end og -->
+    <title>歯茎を噛むと林檎から血が出る</title>
+    <style>
+		@font-face {
+			font-family: 'Hannari';
+			src: url('./font/Hannari.otf') format('opentype');
+		}
+
+        * {
+			margin: 0;
+			font-weight: normal;
+		}
+
+		body {
+			margin: 0;
+			font: 16px monospace;
+			color: #090;
+			background-color: #fff;
+			-ms-writing-mode: tb-rl;
+			-webkit-writing-mode: vertical-rl;
+			writing-mode: vertical-rl;
+			font-family: "Hannari";
+			line-height: 36px;
+			overflow-y: hidden;
+		}
+		body > header {
+			position: fixed;
+			top: 0;
+			right: 0;
+			height: 100%;
+			background: rgb(255, 255, 255);
+			background: rgba(255, 255, 255, 0.8);
+			background: -moz-linear-gradient(
+				center right,
+				rgba(255, 255, 255, 1.0) 0%,
+				rgba(255, 255, 255, 0.8) 80%,
+				rgba(255, 255, 255, 0.0) 100%
+			);
+			background: -webkit-gradient(
+				linear,
+				right center,
+				left center,
+				from(rgba(255, 255, 255, 1.0)),
+				color-stop(0.8, rgba(255, 255, 255, 0.8)),
+				to(rgba(255, 255, 255, 0.0))
+			);
+			background: linear-gradient(
+				center right,
+				rgba(255, 255, 255, 1.0) 0%,
+				rgba(255, 255, 255, 0.8) 80%,
+				rgba(255, 255, 255, 0.0) 100%
+			);
+			z-index: 1;
+		}
+		body > header > h1 {
+			margin: 10px 20px;
+			font-size: 80px;
+			display: block;
+			text-align: left;
+			line-height: 76px;
+			white-space: nowrap;
+		}
+		body > header > h1 > span {
+			color: #d00;
+		}
+
+		#main {
+			color: #070;
+		}
+
+		#main rt {
+			color: #c00;
+		}
+
+		rt {
+			/*filter: blur(0.1px);*/
+		}
+
+/*		#main h1:before {
+			content: "（";
+		}
+		#main h1:after {
+			content: "）";
+		}
+*/
+		ruby:hover > rt {
+			-webkit-filter: blur(1px);
+			-moz-filter: blur(1px);
+			filter: blur(1px);
+		}
+
+		.links {
+			margin-top: 20px;
+			list-style-type: hiragana-iroha;
+		}
+
+		a {
+			color: #f00;
+			text-decoration: none;
+		}
+		a:visited {
+			color: #040;
+		}
+		a:hover {
+			color: #0a0;
+			text-decoration: line-through;
+		}
+		a:active {
+			color: #0a0;
+		}
+
+		#main {
+			position: relative;
+			top: 0;
+			right: 400px;
+		}
+
+		.contents {
+			margin: 50px 30px 50px 0px;
+		}
+		.contents > header > h1 {
+			font-size: 32px;
+		}
+
+		section {
+			margin-top: 20px;
+		}
+
+		#member {
+			column-count: auto;
+			column-width: 400px;
+			column-gap: 16px;
+		}
+		#member > header:first-child {
+			column-span: all;
+		}
+		#member > article {
+			-webkit-column-break-inside: avoid;
+			page-break-inside: avoid;
+			break-inside: avoid;
+        }
+        #member > article > section > img {
+			-webkit-filter: grayscale(100%);
+			-moz-filter: grayscale(100%);
+			filter: grayscale(100%);
+			width: 120px;
+			height: 120px;
+			float: left;
+			margin-right: 1em;
+			margin-bottom: 1em;
+        }
+        #works article {
+       		margin-right: 40px;
+       	}
+		#works dl {
+			margin-top: 20px;
+		}
+		#works dt {
+			font-weight: 900;
+		}
+		#works dd {
+			margin-top: 20px;
+		}
+    </style>
+    <style>
+		.scale_rt {
+			-webkit-animation:scale-rt 0.75s 2 ease-out alternate;
+			animation:scale-rt 0.75s 2 ease-out alternate;
+		}
+		@keyframes scale-rt {
+			from{
+				-ms-transform:scale(1,1);
+				-webkit-transform:scale(1,1);
+				transform:scale(1,1);
+			}
+			to{
+				-ms-transform:scale(1.5, 1.5);
+				-webkit-transform:scale(1.5, 1.5);
+				transform:scale(1.5, 1.5);
+			}
+		}
+    </style>
+</head>
+<body>
+	<header>
+	    <h1><span><ruby><rb>歯茎</rb><rt>はぐき</rt></ruby></span>を<ruby><rb>噛</rb><rt>か</rt></ruby>むと<br>
+	    	<span><ruby><rb>林檎</rb><rt>りんご</rt></ruby></span>から、<br>
+	    	<span><ruby><rb>血</rb><rt>ち</rt></ruby></span>が、<ruby><rb>出</rb><rt>で</rt></ruby>る。</h1>
+	</header>
+	<section id="main">
+		<article id="about" class="contents">
+			<header>
+				<h1><ruby><rb>歯茎</rb><rt>はぐき</rt></ruby>を<ruby><rb>噛</rb><rt>か</rt></ruby>むと<ruby><rb>林檎</rb><rt>りんご</rt></ruby>から<ruby><rb>血</rb><rt>ち</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>る、とは</h1>
+			</header>
+			<section>
+				<header>
+					<h2><ruby><rb>歴史</rb><rt>れきし</rt></ruby></h2>
+				</header>
+				<section>
+					<p><ruby><rb>林檎</rb><rt>りんご</rt></ruby>を<ruby><rb>噛</rb><rt>か</rt></ruby>むと<ruby><rb>歯茎</rb><rt>はぐき</rt></ruby>から<ruby><rb>血</rb><rt>ち</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>るのは<ruby><rb>歯周病</rb><rt>ししゅうびょう</rt></ruby>の<ruby><rb>予兆</rb><rt>よちょう</rt></ruby>である。</p>
+					<p>『<a href="https://ja.wikipedia.org/wiki/歯茎を噛むと林檎から血が出る" target="_blank"><ruby><rb>歯茎</rb><rt>はぐき</rt></ruby>を<ruby><rb>噛</rb><rt>か</rt></ruby>むと<ruby><rb>林檎</rb><rt>りんご</rt></ruby>から<ruby><rb>血</rb><rt>ち</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>る</a>』は<ruby><rb>二〇一六年</rb><rt>にせんじゅうろくねん</rt></ruby>に<ruby><rb>発見</rb><rt>はっけん</rt></ruby>された<ruby><rb>石田</rb><rt>いしだ</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby>と<ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby>の<ruby><rb>二人</rb><rt>ふたり</rt></ruby>が<ruby><rb>神奈川県</rb><rt>かながわけん</rt></ruby><ruby><rb>横浜市</rb><rt>よこはまし</rt></ruby><ruby><rb>中区</rb><rt>なかく</rt></ruby><ruby><rb>伊勢佐木町</rb><rt>いせざきちょう</rt></ruby>で<ruby><rb>結成</rb><rt>けっせい</rt></ruby>したナンセンスな<ruby><rb>長髪</rb><rt>ちょうはつ</rt></ruby><ruby><rb>二人組</rb><rt>ふたりぐみ</rt></ruby>ロン<ruby><rb>毛</rb><rt>げ</rt></ruby><ruby><rb>弾</rb><rt>ひ</rt></ruby>き<ruby><rb>語</rb><rt>がた</rt></ruby>りデュオグループであるとされている。<ruby><rb>通称</rb><rt>つうしょう</rt></ruby>「はぐりん」。</p>
+					<p><ruby><rb>各国</rb><rt>かっこく</rt></ruby>の<ruby><rb>研究機関</rb><rt>けんきゅうきかん</rt></ruby>に<ruby><rb>於</rb><rt>お</rt></ruby>いて<ruby><rb>盛</rb><rt>さか</rt></ruby>んな<ruby><rb>研究</rb><rt>けんきゅう</rt></ruby>が<ruby><rb>行</rb><rt>おこな</rt></ruby>われているにも<ruby><rb>関</rb><rt>かか</rt></ruby>わらず、<ruby><rb>目撃情報</rb><rt>もくげきじょうほう</rt></ruby>は<ruby><rb>未</rb><rt>いま</rt></ruby>だ<ruby><rb>少</rb><rt>すく</rt></ruby>なく、その<ruby><rb>実態</rb><rt>じったい</rt></ruby>は<ruby><rb>多</rb><rt>おお</rt></ruby>くの<ruby><rb>謎</rb><rt>なぞ</rt></ruby>に<ruby><rb>包</rb><rt>つつ</rt></ruby>まれている。</p>
+				</section>
+			</section>
+			<section id="member">
+				<header>
+					<h2>メンバー</h2>
+				</header>
+				<article>
+					<header>
+						<h3><ruby><rb>石毛</rb><rt>いしげ</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby></h3>
+					</header>
+					<section>
+						<img width="120" height="120" src="image/2bite.jpg" alt="石岡２ｂｉｔｅ">
+						<p><ruby><rb>東方</rb><rt>ひがしがた</rt></ruby>、<ruby><rb>東前頭四枚目</rb><rt>ひがしまえがしらよんまいめ</rt></ruby>、<ruby><rb>石山</rb><rt>いしやま</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby>、<ruby><rb>福岡県</rb><rt>ふくおかけん</rt></ruby>オアフ<ruby><rb>島</rb><rt>とう</rt></ruby><ruby><rb>出身</rb><rt>しゅっしん</rt></ruby>、プログラマ。<ruby><rb>血</rb><rt>ち</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>る<ruby><rb>林檎</rb><rt>りんご</rt></ruby><ruby><rb>役</rb><rt>やく</rt></ruby>。</p>
+						<p><ruby><rb>髪</rb><rt>かみ</rt></ruby>の<ruby><rb>長</rb><rt>なが</rt></ruby>い<ruby><rb>黒服</rb><rt>くろふく</rt></ruby><ruby><rb>担当</rb><rt>たんとう</rt></ruby>、<ruby><rb>眼鏡</rb><rt>めがね</rt></ruby>の<ruby><rb>方</rb><rt>ほう</rt></ruby>。<ruby><rb>住所不定無職</rb><rt>じゅうしょふていむしょく</rt></ruby>、<ruby><rb>自称</rb><rt>じしょう</rt></ruby>トキメキノイズアイドル、<a href="https://www.google.co.jp/search?q=%E3%83%9D%E3%83%A1%E3%83%A9%E3%83%8B%E3%82%A2%E3%83%B3" target="_blank">ポメラニアン</a><ruby><rb>愛好家</rb><rt>あいこうか</rt></ruby>。</p>
+						<p><ruby><rb>一九八四年</rb><rt>せんきゅうひゃくはちじゅうよねん</rt></ruby><ruby><rb>生</rb><rt>う</rt></ruby>まれ、<ruby><rb>右投</rb><rt>みぎな</rt></ruby>げ<ruby><rb>右打</rb><rt>みぎう</rt></ruby>ちオーバースロー。<ruby><rb>特技</rb><rt>とくぎ</rt></ruby>は<ruby><rb>金縛</rb><rt>かなしば</rt></ruby>りに<ruby><rb>遇</rb><rt>あ</rt></ruby>うこと。<ruby><rb>好</rb><rt>す</rt></ruby>きな<ruby><rb>言語</rb><rt>げんご</rt></ruby>は<ruby><rb>Ｃ＋＋</rb><rt>しーぷらすぷらす</rt></ruby>テンプレート。<ruby><rb>大学時代</rb><rt>だいがくじだい</rt></ruby>の<ruby><rb>専攻</rb><rt>せんこう</rt></ruby>は<ruby><rb>論理学</rb><rt>ろんりがく</rt></ruby>。<ruby><rb>英語</rb><rt>えいご</rt></ruby>が<ruby><rb>苦手</rb><rt>にがて</rt></ruby>。</p>
+						<p><ruby><rb>最近</rb><rt>さいきん</rt></ruby>、ジャンクな<ruby><rb>電子楽器</rb><rt>でんしがっき</rt></ruby>を<ruby><rb>触</rb><rt>さわ</rt></ruby>るのが<ruby><rb>楽</rb><rt>たの</rt></ruby>しいのを<ruby><rb>思</rb><rt>おも</rt></ruby>い<ruby><rb>出</rb><rt>だ</rt></ruby>し、ヤフオク！を<ruby><rb>漁</rb><rt>あさ</rt></ruby>るのが<ruby><rb>日課</rb><rt>にっか</rt></ruby>になっている。</p>
+						<ul class="links">
+							<li><a href="http://2bit.jp/" target="_blank"><ruby><rb>２ｂｉｔ．ｊｐ</rb><rt>つーびっとどっとじぇいぴー</rt></ruby></a></li>
+							<li><a href="http://2bi.tokyo/" target="_blank"><ruby><rb>２ｂｉ．ｔｏｋｙｏ</rb><rt>つーびっとうきょう</rt></ruby></a></li>
+							<li><a href="http://github.com/2bbb/" target="_blank"><ruby><rb>ｇｉｔｈｕｂ</rb><rt>ぎっとはぶ</rt></ruby></a></li>
+						</ul>
+					</section>
+				</article>
+				<article>
+					<header>
+						<h3><ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby></h3>
+					</header>
+					<section>
+						<img width="120" height="120" src="image/uta.jpg" alt="朝寝坊Ｕ太">
+						<p><ruby><rb>西方</rb><rt>にしがた</rt></ruby>、<ruby><rb>西前頭七枚目</rb><rt>にしまえがしらななまいめ</rt></ruby>、<ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby>、<ruby><rb>名古屋県</rb><rt>なごやけん</rt></ruby>ウランバートル<ruby><rb>出身</rb><rt>しゅっしん</rt></ruby>、ハードウヱアエンジニア。<ruby><rb>噛</rb><rt>か</rt></ruby>まれる<ruby><rb>歯茎</rb><rt>はぐき</rt></ruby><ruby><rb>役</rb><rt>やく</rt></ruby>。</p>
+						<p><ruby><rb>髪</rb><rt>かみ</rt></ruby>の<ruby><rb>長</rb><rt>なが</rt></ruby>い<ruby><rb>黒服</rb><rt>くろふく</rt></ruby><ruby><rb>担当</rb><rt>たんとう</rt></ruby>、<ruby><rb>眼鏡</rb><rt>めがね</rt></ruby>の<ruby><rb>方</rb><rt>ほう</rt></ruby>。ピアスがたくさん<ruby><rb>付</rb><rt>つ</rt></ruby>いた<ruby><rb>元観葉植物</rb><rt>もとかんようしょくぶつ</rt></ruby>、<a href="https://www.google.co.jp/search?q=%E3%83%9D%E3%83%A1%E3%83%A9%E3%83%8B%E3%82%A2%E3%83%B3" target="_blank">ポメラニアン</a><ruby><rb>愛好家</rb><rt>あいこうか</rt></ruby>。</p>
+						<p><ruby><rb>一九九二年</rb><rt>せんきゅうひゃくきゅうじゅうにねん</rt></ruby><ruby><rb>生</rb><rt>う</rt></ruby>まれ、<ruby><rb>右投</rb><rt>みぎな</rt></ruby>げ<ruby><rb>右打</rb><rt>みぎう</rt></ruby>ちサイドスロー。<ruby><rb>特技</rb><rt>とくぎ</rt></ruby>は<ruby><rb>寝坊</rb><rt>ねぼう</rt></ruby>とベース。<ruby><rb>好</rb><rt>す</rt></ruby>きな<ruby><rb>言語</rb><rt>げんご</rt></ruby>はインラインアセンブラ。<ruby><rb>大学時代</rb><rt>だいがくじだい</rt></ruby>の<ruby><rb>専攻</rb><rt>せんこう</rt></ruby>はインテリア。<ruby><rb>英語</rb><rt>えいご</rt></ruby>が<ruby><rb>苦手</rb><rt>にがて</rt></ruby>。</p>
+						<p><ruby><rb>最近</rb><rt>さいきん</rt></ruby>、<ruby><rb>免許</rb><rt>めんきょ</rt></ruby>の<ruby><rb>更新</rb><rt>こうしん</rt></ruby>が<ruby><rb>間</rb><rt>ま</rt></ruby>に<ruby><rb>合</rb><rt>あ</rt></ruby>わず<ruby><rb>失効</rb><rt>しっこう</rt></ruby>した<ruby><rb>うえ</rb><rt>うえ</rt></ruby>、<ruby><rb>仕事中</rb><rt>しごとちゅう</rt></ruby>に<ruby><rb>ＭａｃＢｏｏｋＰｒｏ</rb><rt>まっくぶっくぷろ</rt></ruby>の<ruby><rb>画面</rb><rt>がめん</rt></ruby>を<ruby><rb>割</rb><rt>わ</rt></ruby>り<ruby><rb>悲</rb><rt>かな</rt></ruby>しみに<ruby><rb>打</rb><rt>う</rt></ruby>ち<ruby><rb>拉</rb><rt>ひし</rt></ruby>がれていたが、<ruby><rb>無事</rb><rt>ぶじ</rt></ruby>、<ruby><rb>免許</rb><rt>めんきょ</rt></ruby>を<ruby><rb>取</rb><rt>と</rt></ruby>り<ruby><rb>直</rb><rt>なお</rt></ruby>し、<ruby><rb>ＭａｃＢｏｏｋＰｒｏ</rb><rt>まっくぶっくぷろ</rt></ruby>も<ruby><rb>新</rb><rt>あたら</rt></ruby>しく<ruby><rb>購入</rb><rt>こうにゅう</rt></ruby>した。</p>
+					</section>
+				</article>
+			</section>
+		</article>
+		<article id="works" class="contents">
+			<header>
+				<h1><ruby><rb>作品紹介</rb><rt>さくひんしょうかい</rt></h1>
+			</header>
+			<section>
+				<article>
+					<header>
+						<h2>『<ruby><rb>光</rb><rt>ひか</rt></ruby>る<ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby>を<ruby><rb>使</rb><rt>つか</rt></ruby>った<ruby><rb>照明演出</rb><rt>しょうめいえんしゅつ</rt></ruby>。』</h2>
+					</header>
+					<dl>
+						<dt><ruby><rb>使用素材</rb><rt>しようそざい</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby></dd>
+							<dd><ruby><rb>ＤＭＸ</rb><rt>でぃーえむえっくす</rt></ruby><ruby><rb>調光器</rb><rt>ちょうこうき</rt></ruby></dd>
+							<dd><ruby><rb>延長</rb><rt>えんちょう</rt></ruby>コード</dd>
+							<dd>ギタースタンド</dd>
+							<dd><ruby><rb>ＭａｃＢｏｏｋＰｒｏ</rb><rt>まっくぶっくぷろ</rt></ruby></dd>
+						<dt><ruby><rb>公演情報</rb><rt>こうえんじょうほう</rt></ruby></dt>
+							<dd><ruby><rb>Ｙｏｕｎｇ</rb><rt>やんぐ</rt></ruby> <ruby><rb>Ｊｕｖｅｎｉｌｅ</rb><rt>じゅぶないる</rt></ruby> <ruby><rb>Ｙｏｕｔｈ</rb><rt>ゆうす</rt></ruby></dd>
+							<dd><ruby><rb>Ｂｏｉｌｅｒ</rb><rt>ぼいらあ</rt></ruby> <ruby><rb>Ｒｏｏｍ</rb><rt>るうむ</rt></ruby> <ruby><rb>Ｔｏｋｙｏ</rb><rt>とうきょう</rt></ruby></dd>
+							<dd><ruby><rb>二〇一六年</rb><rt>にせんじゅうろくねん</rt></ruby><ruby><rb>十二月</rb><rt>じゅうにがつ</rt></ruby><ruby><rb>十七日</rb><rt>じゅうななにち</rt></ruby></dd>
+							<dd><ruby><rb>渋谷</rb><rt>しぶや</rt></ruby> <ruby><rb>ＷＷＷ Ｘ</rb><rt>だぶるだぶるだぶる えっくす</rt></ruby></dd>
+						<dt><ruby><rb>石神井</rb><rt>しゃくじい</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器</rb><rt>あんていき</rt></ruby><ruby><rb>調達</rb><rt>ちょうたつ</rt></ruby></dd>
+							<dd><ruby><rb>制御用</rb><rt>せいぎょよう</rt></ruby>プログラム</dd>
+						<dt><ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器用</rb><rt>あんていきよう</rt></ruby>ケーブル<ruby><rb>作成</rb><rt>さくせい</rt></ruby></dd>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器</rb><rt>あんていき</rt></ruby><ruby><rb>調整</rb><rt>ちょうせい</rt></ruby></dd>
+					</dl>
+				</article>
+				<article>
+					<header>
+						<h2>『<ruby><rb>光</rb><rt>ひか</rt></ruby>る<ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby>を<ruby><rb>使</rb><rt>つか</rt></ruby>った<ruby><rb>照明演出</rb><rt>しょうめいえんしゅつ</rt></ruby>。』</h2>
+					</header>
+					<dl>
+						<dt><ruby><rb>使用素材</rb><rt>しようそざい</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby></dd>
+							<dd><ruby><rb>ＤＭＸ</rb><rt>でぃーえむえっくす</rt></ruby><ruby><rb>調光器</rb><rt>ちょうこうき</rt></ruby></dd>
+							<dd><ruby><rb>延長</rb><rt>えんちょう</rt></ruby>コード</dd>
+							<dd>ギタースタンド</dd>
+							<dd><ruby><rb>ＭａｃＢｏｏｋＰｒｏ</rb><rt>まっくぶっくぷろ</rt></ruby></dd>
+						<dt><ruby><rb>公演情報</rb><rt>こうえんじょうほう</rt></ruby></dt>
+							<dd><ruby><rb>Ｙｏｕｎｇ</rb><rt>やんぐ</rt></ruby> <ruby><rb>Ｊｕｖｅｎｉｌｅ</rb><rt>じゅぶないる</rt></ruby> <ruby><rb>Ｙｏｕｔｈ</rb><rt>ゆうす</rt></ruby></dd>
+							<dd><ruby><rb>Ｊ−Ｗａｖｅ</rb><rt>じぇいうぇいぶ</rt></ruby> <ruby><rb>Ｃｈｒｉｓｔｍａｓ</rb><rt>くりすます</rt></ruby> <ruby><rb>Ｓｐｅｃｉａｌ</rb><rt>すぺしゃる</rt></ruby> <ruby><rb>Ｎｉｇｈｔｓ</rb><rt>ないつ</rt></ruby></dd>
+							<dd><ruby><rb>二〇一六年</rb><rt>にせんじゅうろくねん</rt></ruby><ruby><rb>十二月</rb><rt>じゅうにがつ</rt></ruby><ruby><rb>二十日</rb><rt>にじゅうにち</rt></ruby></dd>
+							<dd><ruby><rb>六本木</rb><rt>ろっぽんぎ</rt></ruby>ヒルズ<ruby><rb>展望台</rb><rt>てんぼうだい</rt></ruby> <ruby><rb>東京</rb><rt>とうきょう</rt></ruby>シティビュー</dd>
+						<dt><ruby><rb>石崎</rb><rt>いしざき</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器</rb><rt>あんていき</rt></ruby><ruby><rb>調達</rb><rt>ちょうたつ</rt></ruby></dd>
+							<dd><ruby><rb>制御用</rb><rt>せいぎょよう</rt></ruby>プログラム</dd>
+						<dt><ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器用</rb><rt>あんていきよう</rt></ruby>ケーブル<ruby><rb>作成</rb><rt>さくせい</rt></ruby></dd>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器</rb><rt>あんていき</rt></ruby><ruby><rb>調整</rb><rt>ちょうせい</rt></ruby></dd>
+					</dl>
+				</article>
+				<article>
+					<header>
+						<h2>『<ruby><rb>音</rb><rt>おと</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>る<ruby><rb>ＤＪ</rb><rt>でぃいじぇい</rt></ruby>と<ruby><rb>音</rb><rt>おと</rt></ruby>に<ruby><rb>併</rb><rt>あわ</rt></ruby>せてキーボードを<ruby><rb>自動</rb><rt>じどう</rt></ruby>で<ruby><rb>叩</rb><rt>たた</rt></ruby>くソレノイドによって<ruby><rb>文字</rb><rt>もじ</rt></ruby>が<ruby><rb>映</rb><rt>うつ</rt></ruby>る<ruby><rb>ＶＪ</rb><rt>ぶいじぇい</rt></ruby>。』</h2>
+					</header>
+					<dl>
+						<dt><ruby><rb>使用素材</rb><rt>しようそざい</rt></ruby></dt>
+							<dd><ruby><rb>ＰＣ</rb><rt>ぴーしー</rt></ruby><ruby><rb>ＤＪ</rb><rt>でぃーじぇい</rt></ruby>コントローラー</dd>
+							<dd><ruby><rb>ＭａｃＢｏｏｋＰｒｏ</rb><rt>まっくぶっくぷろ</rt></ruby></dd>
+							<dd>アクリル<ruby><rb>板</rb><rt>ばん</rt></ruby></dd>
+							<dd>ソレノイド</dd>
+							<dd><ruby><rb>Ｔｅｅｎｓｙ</rb><rt>てぃーんじー</rt></ruby></dd>
+						<dt><ruby><rb>公演情報</rb><rt>こうえんじょうほう</rt></ruby></dt>
+							<dd>（<ruby><rb>Ｔｉｌｔ</rb><rt>てぃると</rt></ruby> <ruby><rb>Ｆｌａｍｉｎｇｏ</rb><rt>ふらみんご</rt></ruby> <ruby><rb>ｖｏｌ．</rb><rt>ぼりゅーむ</rt></ruby> <ruby><rb>０</rb><rt>ぜろ</rt></ruby>）</dd>
+							<dd><ruby><rb>二〇一六年</rb><rt>にせんじゅうろくねん</rt></ruby><ruby><rb>十二月</rb><rt>じゅうにがつ</rt></ruby><ruby><rb>二十三日</rb><rt>にじゅうさんにち</rt></ruby></dd>
+							<dd><ruby><rb>不動前</rb><rt>ふどうまえ</rt></ruby><ruby><rb>Ｂａｒ</rb><rt>ばー</rt></ruby><ruby><rb>青猫</rb><rt>あおねこ</rt></ruby></dd>
+						<dt><ruby><rb>石下</rb><rt>いしした</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby></dt>
+							<dd><ruby><rb>ＤＪ</rb><rt>でぃいじぇい</rt></ruby></dd>
+						<dt><ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby></dt>
+							<dd><ruby><rb>ＶＪ</rb><rt>ぶいじぇい</rt></ruby></dd>
+							<dd>ソレノイド<ruby><rb>制御</rb><rt>せいぎょ</rt></ruby>プログラム</dd>
+						<dt><ruby><rb>Ｍｏｌｒｅｙ</rb><rt>もうり</rt></ruby>（<ruby><rb>助</rb><rt>すけ</rt></ruby>っ<ruby><rb>人</rb><rt>と</rt></ruby>）</dt>
+							<dd>アクリル<ruby><rb>板</rb><rt>ばん</rt></ruby><ruby><rb>加工</rb><rt>かこう</rt></ruby></dd>
+					</dl>
+				</article>
+				<article>
+					<header>
+						<h2>『<ruby><rb>光</rb><rt>ひか</rt></ruby>る<ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby>を<ruby><rb>使</rb><rt>つか</rt></ruby>った<ruby><rb>照明演出</rb><rt>しょうめいえんしゅつ</rt></ruby>。』</h2>
+					</header>
+					<dl>
+						<dt><ruby><rb>使用素材</rb><rt>しようそざい</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby></dd>
+							<dd><ruby><rb>ＤＭＸ</rb><rt>でぃーえむえっくす</rt></ruby><ruby><rb>調光器</rb><rt>ちょうこうき</rt></ruby></dd>
+							<dd><ruby><rb>延長</rb><rt>えんちょう</rt></ruby>コード</dd>
+							<dd><ruby><rb>ＭａｃＢｏｏｋＰｒｏ</rb><rt>まっくぶっくぷろ</rt></ruby></dd>
+						<dt><ruby><rb>公演情報</rb><rt>こうえんじょうほう</rt></ruby></dt>
+							<dd><ruby><rb>Ｙｏｕｎｇ</rb><rt>やんぐ</rt></ruby> <ruby><rb>Ｊｕｖｅｎｉｌｅ</rb><rt>じゅぶないる</rt></ruby> <ruby><rb>Ｙｏｕｔｈ</rb><rt>ゆうす</rt></ruby></dd>
+							<dd><ruby><rb>Ａｍｐ</rb><rt>あんぷ</rt></ruby></dd>
+							<dd><ruby><rb>二〇一七年</rb><rt>にせんじゅうななねん</rt></ruby><ruby><rb>一月</rb><rt>いちがつ</rt></ruby><ruby><rb>二十九日</rb><rt>にじゅうくにち</rt></ruby></dd>
+							<dd><ruby><rb>Ｃｉｒｃｕｓ</rb><rt>さーかす</rt></ruby> <ruby><rb>Ｔｏｋｙｏ</rb><rt>とうきょう</rt></ruby></dd>
+						<dt><ruby><rb>石川</rb><rt>いしかわ</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器</rb><rt>あんていき</rt></ruby><ruby><rb>調達</rb><rt>ちょうたつ</rt></ruby></dd>
+							<dd><ruby><rb>制御用</rb><rt>せいぎょよう</rt></ruby>プログラム</dd>
+						<dt><ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby></dt>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器用</rb><rt>あんていきよう</rt></ruby>ケーブル<ruby><rb>作成</rb><rt>さくせい</rt></ruby></dd>
+							<dd><ruby><rb>蛍光灯</rb><rt>けいこうとう</rt></ruby><ruby><rb>安定器</rb><rt>あんていき</rt></ruby><ruby><rb>調整</rb><rt>ちょうせい</rt></ruby></dd>
+							<dd><ruby><rb>制御用</rb><rt>せいぎょよう</rt></ruby>プログラム</dd>
+					</dl>
+				</article>
+				<article>
+					<header>
+						<h2>『<ruby><rb>音</rb><rt>おと</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>る<ruby><rb>ＤＪ</rb><rt>でぃいじぇい</rt></ruby>と<ruby><rb>音</rb><rt>おと</rt></ruby>に<ruby><rb>併</rb><rt>あわ</rt></ruby>せて<ruby><rb>音量</rb><rt>おんりょう</rt></ruby>が<ruby><rb>表示</rb><rt>ひょうじ</rt></ruby>される<ruby><rb>ＶＪ</rb><rt>ぶいじぇい</rt></ruby>。』</h2>
+					</header>
+					<dl>
+						<dt><ruby><rb>使用素材</rb><rt>しようそざい</rt></ruby></dt>
+							<dd><ruby><rb>ＰＣ</rb><rt>ぴいしい</rt></ruby><ruby><rb>ＤＪ</rb><rt>でぃいじぇい</rt></ruby>コントローラー</dd>
+							<dd><ruby><rb>ＭａｃＢｏｏｋＰｒｏ</rb><rt>まっくぶっくぷろ</rt></ruby></dd>
+						<dt><ruby><rb>公演情報</rb><rt>こうえんじょうほう</rt></ruby></dt>
+							<dd><ruby><rb>Ｔｉｌｔ</rb><rt>てぃると</rt></ruby> <ruby><rb>Ｆｌａｍｉｎｇｏ</rb><rt>ふらみんご</rt></ruby> <ruby><rb>ｖｏｌ．</rb><rt>ぼりゅーむ</rt></ruby> <ruby><rb>１</rb><rt>いち</rt></ruby></dd>
+							<dd><ruby><rb>二〇一七年</rb><rt>にせんじゅう七ねん</rt></ruby><ruby><rb>一月</rb><rt>いちがつ</rt></ruby><ruby><rb>十七日</rb><rt>じゅうななにち</rt></ruby></dd>
+							<dd><ruby><rb>不動前</rb><rt>ふどうまえ</rt></ruby><ruby><rb>Ｂａｒ</rb><rt>ばー</rt></ruby><ruby><rb>青猫</rb><rt>あおねこ</rt></ruby></dd>
+						<dt><ruby><rb>石岡</rb><rt>いしおか</rt></ruby><ruby><rb>２ｂｉｔｅ</rb><rt>つうばいと</rt></ruby></dt>
+							<dd><ruby><rb>ＤＪ</rb><rt>でぃいじぇい</rt></ruby></dd>
+						<dt><ruby><rb>朝寝坊</rb><rt>あさねぼう</rt></ruby><ruby><rb>Ｕ太</rb><rt>ゆうた</rt></ruby></dt>
+							<dd><ruby><rb>ＶＪ</rb><rt>ぶいじぇい</rt></ruby></dd>
+					</dl>
+				</article>
+			</section>
+		</article>
+	</section>
+<!--	<footer>
+		<p><ruby><rb>歯茎</rb><rt>はぐき</rt></ruby>を<ruby><rb>噛</rb><rt>か</rt></ruby>むと<ruby><rb>林檎</rb><rt>りんご</rt></ruby>から<ruby><rb>血</rb><rt>ち</rt></ruby>が<ruby><rb>出</rb><rt>で</rt></ruby>る<ruby><rb>実行委員会</rb><rt>じっこういいんかい</rt></ruby></p>
+	</footer>-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- <script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script> -->
+	<script>
+		/* jQuery Tap Event */
+		(function($, window) {
+			"use strict";
+
+			var RANGE = 5,
+				events = ["click", "touchstart", "touchmove", "touchend"],
+				handlers = {
+					click: function(e) {
+						if(e.target === e.currentTarget)
+							e.preventDefault();
+					},
+					touchstart: function(e) {
+						this.jQueryTap.touched = true;
+						this.jQueryTap.startX = e.touches[0].pageX;
+						this.jQueryTap.startY = e.touches[0].pageY;
+					},
+					touchmove: function(e) {
+						if(!this.jQueryTap.touched) {
+							return;
+						}
+
+						if(Math.abs(e.touches[0].pageX - this.jQueryTap.startX) > RANGE ||
+						   Math.abs(e.touches[0].pageY - this.jQueryTap.startY) > RANGE) {
+							this.jQueryTap.touched = false;
+						}
+					},
+					touchend: function(e) {
+						if(!this.jQueryTap.touched) {
+							return;
+						}
+
+						this.jQueryTap.touched = false;
+						$.event.dispatch.call(this, $.Event("tap", {
+							originalEvent: e,
+							target: e.target,
+							pageX: e.changedTouches[0].pageX,
+							pageY: e.changedTouches[0].pageY
+						}));
+					}
+				};
+
+			$.event.special.tap = "ontouchend" in window? {
+				setup: function() {
+					var thisObj = this;
+					
+					if(!this.jQueryTap) {
+						Object.defineProperty(this, "jQueryTap", {value: {}});
+					}
+					$.each(events, function(i, ev) {
+						thisObj.addEventListener(ev, handlers[ev], false);
+					});
+				},
+				teardown: function() {
+					var thisObj = this;
+					
+					$.each(events, function(i, ev) {
+						thisObj.removeEventListener(ev, handlers[ev], false);
+					});
+				}
+			}: {
+				bindType: "click",
+				delegateType: "click"
+			};
+
+			$.fn.tap = function(data, fn) {
+				return arguments.length > 0? this.on("tap", null, data, fn): this.trigger("tap");
+			};
+		})(jQuery, this);
+	</script>
+    <script type="text/javascript">
+		$(function($) {
+	    	var ruby_swapper = new RegExp(/(.+)<rt>(.+)<\/rt>/);
+			$("body")
+				.tap(function() {
+					$("ruby").each(function(i) {
+						var $this = $(this),
+							$rb = $this.find("rb"),
+							$rt = $this.find("rt"),
+							rb_text = $rb.text();
+						$rb.text($rt.text());
+						$rt.text(rb_text);
+					}).find("rt").toggle();
+				});
+
+			var $rts = $("body > header > h1 rt");
+			function zoomInOut() {
+				(function($rt) {
+					if(!$rt.hasClass("scale_rt")) {
+						$rt.addClass("scale_rt");
+						setTimeout(function(){ $rt.removeClass("scale_rt"); }, 2000);
+					}
+				})($rts.eq(($rts.size() * Math.random()) ^ 0));
+			};
+			setInterval(zoomInOut, 700);
+
+			// var $header = $("body > header"),
+			// 	$window = $(window),
+			// 	$document = $(document);
+			// $window.scroll(function() {
+			// 	if($window.scrollLeft() <= 0) {
+			// 		if($header.queue().length == 0) $header.css({"right": -$window.scrollLeft()}, 60);
+			// 	}
+			// });
+		});
+    </script>
+</body>
+</html>
