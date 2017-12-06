@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="ISHII 2bit &amp; ASAI Yuta">
+    <meta name="keywords" content="ISHII 2bit,ASAI Yuta,歯茎を噛むと林檎から血が出る,Haguki Wo Kamu To Ringo Kara Ti Ga Deru">
+    <meta name="description" content="Haguki Wo Kamu To Ringo Kara Ti Ga Deru - Official Website">
+    <!-- begin og -->
+        <meta property="og:title" content="Haguki Wo Kamu To Ringo Kara Ti Ga Deru">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="http://歯茎を噛むと林檎から血が出る.jp/">
+        <meta property="og:description" content="Haguki Wo Kamu To Ringo Kara Ti Ga Deru - Official Website">
+        <meta property="og:image" content="http://歯茎を噛むと林檎から血が出る.jp/og.png">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+    <!-- end og -->
+    <title>Haguki Wo Kamu To Ringo Kara Ti Ga Deru</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            color: #ccc;
+        }
+        div {
+            margin: 0;
+        }
+        h1, h2, h3, 
+        div, p, section {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        span.ourname {
+            font-style: italic;
+        }
+        body {
+            width: 960px;
+            padding-top: 100px;
+            margin: 0 auto;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 20px;
+            background-color: #000;
+        }
+        article, section, div {
+            margin: 8px 0;
+        }
+        a {
+            color: inherit;
+        }
+        p {
+            margin: 5px 0;
+        }
+        #main > article {
+            margin-top: 40px;
+        }
+        #member > h1 {
+            width: 100%;
+        }
+        #member > section {
+            width: 100%;
+            columns: auto 2;
+        }
+        #member > section > article {
+            display: inline-block;
+        }
+        #member article {
+            clear: both;
+        }
+        img.profile {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-right: 18px;
+            filter: grayscale(100);
+            opacity: 0.8;
+        }
+        span.firstname {
+            font-style: italic;
+            font-weight: 600;
+        }
+        span.lastname {
+            font-weight: 900;
+        }
+
+        dl {
+            width: 100%;
+        }
+
+        dt {
+            float: left;
+            clear: left;
+            width: 10%;
+        }
+
+        dd {
+            float: left;
+            width: 80%;
+        }
+
+        dl:after {
+            content: ".";
+            display: block;
+            width: 0;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+    </style>
+    <style>
+        .video-background {
+            background: #000;
+            position: fixed;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -99;
+        }
+        .video-foreground,
+        .video-background iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+        }
+        #vidtop-content {
+            top: 0;
+            color: #fff;
+        }
+        .vid-info { position: absolute; top: 0; right: 0; width: 33%; background: rgba(0,0,0,0.3); color: #fff; padding: 1rem; font-family: Avenir, Helvetica, sans-serif; }
+        .vid-info h1 { font-size: 2rem; font-weight: 700; margin-top: 0; line-height: 1.2; }
+        .vid-info a { display: block; color: #fff; text-decoration: none; background: rgba(0,0,0,0.5); transition: .6s background; border-bottom: none; margin: 1rem auto; text-align: center; }
+        @media (min-aspect-ratio: 16/9) {
+          .video-foreground { height: 300%; top: -100%; }
+        }
+        @media (max-aspect-ratio: 16/9) {
+          .video-foreground { width: 300%; left: -100%; }
+        }
+        @media all and (max-width: 600px) {
+            .vid-info {
+                width: 50%; padding: .5rem;
+            }
+            .vid-info h1 {
+                margin-bottom: .2rem;
+            }
+        }
+        @media all and (max-width: 500px) {
+            .vid-info .acronym {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="video-background" id="video-background">
+        <div class="video-foreground" id="video-foreground">
+            <iframe id="bg-video" frameborder="0" allowfullscreen></iframe>
+		</div>
+    </div>
+    <header>
+        <h1><span class="ourname"><span id="hagukiwo" style="display: none;">Haguki Wo</span> <span id="kamuto" style="display: none;">Kamu To</span> <span id="ringokara" style="display: none;">Ringo Kara</span> <span id="tigaderu"style="display: none;">Ti Ga Deru</span></span></h1>
+    </header>
+    <main id="main" style="display: none;">
+        <article id="about">
+            <h1>What's <span class="ourname">"Haguki Wo Kamu To Ringo Kara Ti Ga Deru"</span>?</h1>
+            <section>
+                <p><span class="ourname">"Haguki Wo Kamu To Ringo Kara Ti Ga Deru"</span> are unit of programmers and engineers.</p>
+                <p><a href="https://github.com/HagukiWoKamuToRingoKaraTiGaDeru" target="_blank">github/HagukiWoKamuToRingoKaraTiGaDeru</a></p>
+            </section>
+        </article>
+        <article id="member">
+            <h1>Member of <span class="ourname">"Haguki Wo Kamu To Ringo Kara Ti Ga Deru"</span>.</h1>
+            <section>
+                <article>
+                    <h1><span class="lastname">ISHII</span> <span class="firstname">2bit</span></h1>
+                    <section>
+                        <img class="profile" src="../image/2bite.jpg">
+                        <p>Born in 1984, Master of Science, Mathematics at Yamaguchi University, Programmer.</p>
+                        <p><a href="https://github.com/2bbb" target="_blank">github/2bbb</a></p>
+                    </section>
+                </article>
+                <article>
+                    <h1><span class="lastname">ASAI</span> <span class="firstname">Yuta</span></h1>
+                    <section>
+                        <img class="profile" src="../image/uta.jpg">
+                        <p>Born in 1992, Bachelor of Arts, Interior design at Musashino Art Univesity, Engineer.</p>
+                        <p><a href="https://github.com/asaiyuta" target="_blank">github/asaiyuta</a></p>
+                    </section>
+                </article>
+            </section>
+        </article>
+        <article id="contact">
+            <h1>Contact to <span class="ourname">"Haguki Wo Kamu To Ringo Kara Ti Ga Deru"</span>.</h1>
+            <div>
+                <article>
+                    <dl>
+                        <dt>E-Mail</dt>
+                            <dd>otayori@hagukiwokamutoringokaratigaderu.website</dd>
+                        <dt>github</dt>
+                            <dd><a href="https://github.com/HagukiWoKamuToRingoKaraTiGaDeru" target="_blank">https://github.com/HagukiWoKamuToRingoKaraTiGaDeru</a></dd>
+                        <dt>twitter</dt>
+                            <dd><a href="https://twitter.com/hagukamurintide" target="_blank">https://twitter.com/hagukamurintide</a></dd>
+                        <dt>youtube</dt>
+                            <dd><a href="https://www.youtube.com/channel/UCMMx6as20U_ftOonPTg4PBg/" target="_blank">https://www.youtube.com/channel/UCMMx6as20U_ftOonPTg4PBg/</a></dd>
+                        <dt>Japanese page (日本語の歯茎を噛むと林檎から血が出る)</dt>
+                            <dd><a href="http://歯茎を噛むと林檎から血が出る/">http://歯茎を噛むと林檎から血が出る/</a></dd>
+                    </dl>
+                </article>
+            </div>
+        </article>
+        <article id="works">
+            <h1>Works of <span class="ourname">"Haguki Wo Kamu To Ringo Kara Ti Ga Deru"</span>.</h1>
+            <div>
+                <article>
+                    <h1>"Ligting uses controlled fluorescent lamps."</h1>
+                    <section>
+                        <ul>
+                            <li>Young Juvenile Youth live performance</li>
+                            <li>"Boiler Room Tokyo"</li>
+                            <li>at WWW X</li>
+                            <li>2016/12/17</li>
+                            <li><a href="https://www.youtube.com/watch?v=SDobuPHmOb8" target="_blank">video at youtube</a></li>
+                        </ul>
+                    </section>
+                </article>
+                <article>
+                    <h1>"Ligting uses controlled fluorescent lamps."</h1>
+                    <section>
+                        <ul>
+                            <li>Young Juvenile Youth live performance</li>
+                            <li>"J-Wave Christmas Special Night"</li>
+                            <li>at ROPPONGI Hills</li>
+                            <li>2016/12/20</li>
+                        </ul>
+                    </section>
+                </article>
+                <article>
+                    <h1>"Ligting uses controlled fluorescent lamps."</h1>
+                    <section>
+                        <ul>
+                            <li>Young Juvenile Youth live performance</li>
+                            <li>"Amp"</li>
+                            <li>at Circus Tokyo</li>
+                            <li>2017/01/29</li>
+                        </ul>
+                    </section>
+                </article>
+                <article>
+                    <h1>"An installation art of many fluorescent lights lighting by feedback of noise what some part of fluorescent lights emit when light up collected by some microphones are reflected by mirror and those look more than those actually are"</h1>
+                    <section>
+                        <ul>
+                            <li>"SKEEN"</li>
+                            <li>at Shibiuya Contact</li>
+                            <li>2017/08/26</li>
+                            <li>Installation support: MOHRI Kyohei</li>
+                            <li>Interactive design: YANAGISAWA Tomoaki</li>
+                            <li>Sound, Produce: KUROTAKI Setsuya</li>
+                        </ul>
+                    </section>
+            </div>
+        </article>
+    </main>
+    <script type="text/javascript">
+        if(!window.speechSynthesis) {
+            document.getElementById('hagukiwo').style.display = '';
+            document.getElementById('kamuto').style.display = '';
+            document.getElementById('ringokara').style.display = '';
+            document.getElementById('tigaderu').style.display = '';
+            document.getElementById('main').style.display = '';
+        } else {
+            var timer = null;
+            function createTimer() {
+                timer = setInterval(function() {
+                    document.getElementById('hagukiwo').style.display = '';
+                    document.getElementById('kamuto').style.display = '';
+                    document.getElementById('ringokara').style.display = '';
+                    document.getElementById('tigaderu').style.display = '';
+                    document.getElementById('main').style.display = '';
+                }, 1000);
+            };
+            createTimer();
+            setTimeout(function() {
+                var u = new SpeechSynthesisUtterance();
+                u.text = 'her good key o come toe ring oak a la chick god ale';
+                u.lang = 'en-US';
+                u.rate = 1.0;
+                u.volume = 0.3;
+
+                u.onstart = function(event) {
+                    clearInterval(timer);
+                    timer = null;
+                };
+                u.onboundary = function(event) {
+                    document.getElementById('hagukiwo').style.display = '';
+                    switch(u.text.slice(0, event.charIndex).trim()) {
+                        case 'her good key o':
+                            document.getElementById('kamuto').style.display = '';
+                            break;
+                        case 'her good key o come toe':
+                            document.getElementById('ringokara').style.display = '';
+                            break;
+                        case 'her good key o come toe ring oak a la':
+                            document.getElementById('tigaderu').style.display = '';
+                            break;
+                        case 'her good key o come toe ring oak a la chick god ale':
+                            break;
+                    }
+                };
+                u.onend = function(event) {
+                    document.getElementById('main').style.display = '';
+                    document.getElementsByTagName('body')[0].style.marginBottom = '100%';
+                    document.getElementById('bg-video').src = "https://www.youtube.com/embed/xzzl1ghI9X0?controls=0&showinfo=0&rel=0&autoplay=1&playlist=xzzl1ghI9X0&mute=1&start=30";
+                };
+                speechSynthesis.speak(u);
+            }, 500);
+
+            var ua = navigator.userAgent.toUpperCase();
+            if(document.referrer.indexOf(location.href.split('/')[2]) == -1 && (ua.indexOf('IPHONE') != -1 || (ua.indexOf('ANDROID') != -1 && ua.indexOf('MOBILE') != -1)))
+            {
+                var videoBackground = document.getElementById('video-background')
+                videoBackground.parentNode.removeChild(videoBackground);
+            }
+        }
+    </script>
+</body>
+</html>
